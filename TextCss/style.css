@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --bg-color: #252839;
+  --text-color-dark: #282d52;
+  --text-color-light: #01fe87;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  cursor: none;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-bottom: 2px solid #fff;
+}
+/*1st*/
+.cont1 {
+  background: var(--bg-color);
+}
+.h1-1 {
+  position: relative;
+  font-size: 14vw;
+  color: var(--bg-color);
+  -webkit-text-stroke: 0.5vw var(--text-color-dark);
+  text-transform: uppercase;
+}
+.h1-1::before {
+  content: attr(data-text1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: var(--text-color-light);
+  -webkit-text-stroke: 0vw var(--text-color-dark);
+  border-right: 0.3vw solid var(--text-color-light);
+  overflow: hidden;
+  animation: animate 6s linear infinite;
+}
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+  60%,
+  80% {
+    width: 100%;
+  }
+}
+/*2nd*/
+.cont2 {
+  background: #343f4f;
+}
+.wrapper {
+  display: inline-flex;
+}
+.wrapper .static-text {
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+}
+.wrapper .dynamic-texts {
+  margin-left: 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-texts li {
+  color: #fc6d6d;
+  list-style: none;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 9s steps(3) infinite; /* time(9s) -> time of typing(3s) * number of li's(3) */
+}
+@keyframes slide {
+  100% {
+    top: -270px; /* Line Height(90px) * Number of li's(3) = 270 */
+  }
+}
+.dynamic-texts li span {
+  position: relative;
+}
+.dynamic-texts li span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #343f4f;
+  border-left: 2px solid #fc6d6d;
+  animation: typing 3s steps(12) infinite;
+}
+@keyframes typing {
+  50% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}

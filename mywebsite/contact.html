@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CONTACT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--    <script src="js/scripts.js"></script>-->
+</head>
+<body id="contact-page">
+    <div class="container">
+        <header class="header">
+            <h1 class="link-title">CONTACT<br>WITH<br>ME<br><i class="glyphicon glyphicon-envelope"></i></h1>
+        </header>
+        <ul class="menu">
+            <li><a href="/">Home</a></li> 
+            <li><a href="about.html">About us</a></li>
+            <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+        <aside>
+            <h1></h1>
+        </aside>
+        <article class="main">
+        <h1 class="page-heading">Contact Form</h1>
+        <h4>[ Fill this properly ]</h4>
+        <div id="form">
+              <!--<fieldset id="field">-->
+                <form method="post" action="process.php">
+                <p>
+                <label for="name">Name</label>
+                <input class="input" type="text" name="name" placeholder=" enter your name"  required>
+                </p>
+                <p>
+                <label for="name">Email</label>
+                <input type="email" name="email" placeholder=" enter your email" required>
+                </p>
+                <p>
+                <label for="name">Subject</label>
+                <input type="text" name="subject" placeholder=" enter your subject" required>
+                </p>
+                <p>
+                <label for="name">Message</label>
+                <textarea id="msg" name="message" id="" cols="30" rows="10" required></textarea>    
+                </p>    
+                <p>
+                    <input id="submit" type="submit" name="submit" value="Send Message">
+                </p>
+                </form>
+                <!--</fieldset>-->
+            </div>
+        </article>
+        <footer>
+            &copy; 2019 My Website &nbsp;<span class="separetor">|</span>&nbsp; designed by <a href="http//www.google.com">soumyojtoti</a>
+        </footer>
+    </div>
+</body>
+</html>
